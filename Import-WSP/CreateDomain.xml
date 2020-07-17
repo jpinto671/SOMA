@@ -1,0 +1,27 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+    <env:Body>
+        <dp:request domain="default"  xmlns:dp="http://www.datapower.com/schemas/management">
+            <dp:set-config>
+                <Domain name="MyNewDomain">
+                    <UserSummary>New Domain by SOMA</UserSummary>
+                    <NeighborDomain class="Domain">default</NeighborDomain>    
+                    <base-dir>MyNewDomain:</base-dir>
+                    <base-dir>local:</base-dir>
+                    <config-file>MyNewDomain.cfg</config-file>
+                    <visible-domain>default</visible-domain>
+                    <url-permissions>http+https</url-permissions>
+                    <file-permissions>CopyFrom+CopyTo+Delete+Display+Exec+Subdir</file-permissions>
+                    <filemonitoring>Audit+Log</filemonitoring>
+                    <config-mode>local</config-mode>
+                    <import-format>ZIP</import-format>
+                    <local-ip-rewrite></local-ip-rewrite>
+                    <maxchkpoints>3</maxchkpoints>
+                </Domain>
+            </dp:set-config>
+            <dp:do-action>
+                <SaveConfig/>
+            </dp:do-action>
+        </dp:request>
+        
+    </env:Body>
+</env:Envelope>

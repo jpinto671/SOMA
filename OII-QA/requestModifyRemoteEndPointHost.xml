@@ -1,0 +1,21 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+    <env:Body>
+        <soma:request xmlns:soma="http://www.datapower.com/schemas/management" domain="Walmart">
+            <soma:modify-config>
+                <WSEndpointRewritePolicy name="Calculator">
+                    <WSEndpointRemoteRewriteRule>
+						<!--Nota: verificar en el Object-> WebService-> WS-Proxy-Endpoint-Rewrite->Remote-Rewrite-Rule->el service port Match Expression-->
+                    	<ServicePortMatchRegexp>^{http://tempuri.org/calculator_ms}calculator_msSOAP_HTTP_Port$</ServicePortMatchRegexp>
+                         <RemoteEndpointProtocol>http</RemoteEndpointProtocol>
+    				     <RemoteEndpointHostname>2.2.2.2</RemoteEndpointHostname>
+    				     <RemoteEndpointPort>80</RemoteEndpointPort>
+    				     <RemoteEndpointURI>/serviciosmas/Business/CAZService.svc</RemoteEndpointURI>
+    				     <RemoteMQQM/>
+    					<RemoteTibcoEMS/>
+    					<RemoteWebSphereJMS/>
+                    </WSEndpointRemoteRewriteRule>
+                </WSEndpointRewritePolicy>
+            </soma:modify-config>
+        </soma:request>
+    </env:Body>
+</env:Envelope>

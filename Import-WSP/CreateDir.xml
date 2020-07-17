@@ -1,0 +1,12 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+    <env:Body>
+        <dp:request domain="MyNewDomain" xmlns:dp="http://www.datapower.com/schemas/management">
+            <dp:do-action>
+                    <CreateDir>
+                        <Dir>local:///MyIbmTest</Dir>
+                    </CreateDir>
+                
+            </dp:do-action>
+        </dp:request>
+    </env:Body>
+</env:Envelope>

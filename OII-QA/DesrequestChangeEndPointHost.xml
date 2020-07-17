@@ -1,0 +1,21 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+    <env:Body>
+        <soma:request xmlns:soma="http://www.datapower.com/schemas/management" domain="ad-desarrollo">
+            <soma:modify-config>
+                <WSEndpointRewritePolicy name="testPoliza_wsp">
+                    <WSEndpointRemoteRewriteRule>
+						<!--Nota: verificar en el Object-> WebService-> WS-Proxy-Endpoint-Rewrite->Remote-Rewrite-Rule->el service port Match Expression-->
+                        <ServicePortMatchRegexp>^{http://smnyl.com.mx/ws/esb/Poliza}PolizaSOAP$</ServicePortMatchRegexp>
+                        <RemoteEndpointProtocol>HTTP</RemoteEndpointProtocol>
+                        <RemoteEndpointHostname>tqliib01.smnyl.com.mx</RemoteEndpointHostname>
+                        <RemoteEndpointPort>9403</RemoteEndpointPort>
+                        <RemoteEndpointURI>/Poliza</RemoteEndpointURI>
+    				     <RemoteMQQM/>
+    					<RemoteTibcoEMS/>
+    					<RemoteWebSphereJMS/>
+                    </WSEndpointRemoteRewriteRule>
+                </WSEndpointRewritePolicy>
+            </soma:modify-config>
+        </soma:request>
+    </env:Body>
+</env:Envelope>

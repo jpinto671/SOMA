@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:man="http://www.datapower.com/schemas/management">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <man:request domain="default"> <!-- Replace domain name -->
+            <man:do-action>
+                <TCPConnectionTest>
+                    <RemoteHost>172.24.1.2</RemoteHost>
+                    <RemotePort>7002</RemotePort>
+                </TCPConnectionTest>
+            </man:do-action>
+        </man:request>
+    </soapenv:Body>
+</soapenv:Envelope>

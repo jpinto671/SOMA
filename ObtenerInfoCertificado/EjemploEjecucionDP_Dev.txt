@@ -1,0 +1,93 @@
+idg# exec local:///exec/ObtenerInfoCertificadosDominios.cfg
+Executing script 'local:///exec/ObtenerInfoCertificadosDominios.cfg'.
+
+---ingresar al domain default y ejecutar la siguiente linea, o ejecutar script desde SOMA--- 
+exec local:///exec/ObtenerInfoCertificadosDominios.cfg 
+---switch Domain AppMovil_Dev--- 
+Global mode
+Crypto mode
+
+certificate: dev-servicios.mnyl.com.mx [up] 
+--------------------------------------
+ admin-state enabled 
+ file-name cert:///mnyl.com.mx.pem 
+ ignore-expiration off 
+
+certificate: dpvqrodev.smnyl.com.mx [up] 
+-----------------------------------
+ admin-state enabled 
+ file-name cert:///dpvqrodev.smnyl.com.mx.crt 
+ ignore-expiration off 
+
+certificate: GeoTrustRSACA2018 [up] 
+------------------------------
+ admin-state enabled 
+ file-name pubcert:///GeoTrustRSACA2018.crt 
+ ignore-expiration off 
+
+
+---exit crypto configuration--- 
+Exiting Crypto mode
+---exit global configuration--- 
+Global mode
+Crypto mode
+
+certificate: Cert_validateSalesForce [up] 
+------------------------------------
+ admin-state enabled 
+ file-name cert:///ValidateCert-SMNYL-SF.crt 
+ ignore-expiration off 
+
+certificate: ConsultaPdf_CertificateValido [up] 
+------------------------------------------
+ admin-state enabled 
+ file-name cert:///webflowdesmex_smnyl_com_mx.crt 
+ ignore-expiration off 
+
+certificate: CryptoValidatePoliza [up] 
+---------------------------------
+ admin-state enabled 
+ file-name cert:///ValidateCert-SMNYL-SF.crt 
+ ignore-expiration off 
+
+certificate: dev-servicios.mnyl.com.mx [up] 
+--------------------------------------
+ admin-state enabled 
+ file-name cert:///mnyl.com.mx.pem 
+ ignore-expiration off 
+
+certificate: dpvqrodev.smnyl.com.mx [up] 
+-----------------------------------
+ admin-state enabled 
+ file-name cert:///dpvqrodev.smnyl.com.mx.crt 
+ ignore-expiration off 
+
+certificate: dpvqroqa.smnyl.com.mx [down] 
+----------------------------------
+ admin-state enabled 
+ file-name cert:///dpvqroqa.smnyl.com.mx.crt 
+ ignore-expiration off 
+
+certificate: GeoTrustRSACA2018 [up] 
+------------------------------
+ admin-state enabled 
+ file-name pubcert:///GeoTrustRSACA2018.crt 
+ ignore-expiration off 
+
+certificate: qa-servicios.mnyl.com.mx [up] 
+-------------------------------------
+ admin-state enabled 
+ file-name cert:///mnyl.com.mx.pem 
+ ignore-expiration off 
+
+certificate: smnyl-SubQro-CA [up] 
+----------------------------
+ admin-state enabled 
+ file-name sharedcert:///smnyl-SubQro-CA.crt 
+ ignore-expiration off 
+
+
+---exit crypto configuration--- 
+Exiting Crypto mode
+---exit global configuration--- 
+Finished script 'local:///exec/ObtenerInfoCertificadosDominios.cfg' successfully

@@ -1,0 +1,7 @@
+##Script para verificar la conexion a la VPN-STP
+
+##*/5 * * * * /home/jpinto/SOMA/QA.sh > /home/jpinto/SOMA/QA.log
+##*/5 * * * * /home/jpinto/SOMA/DP1.sh > /home/jpinto/SOMA/DP1.log
+##*/5 * * * * /home/jpinto/SOMA/DP2.sh > /home/jpinto/SOMA/DP2.log
+
+##*/10 * * * * /home/jpinto/SOMA/VerificaSalida.sh > /home/jpinto/SOMA/VerificaSalida.log

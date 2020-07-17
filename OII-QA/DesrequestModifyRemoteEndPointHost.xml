@@ -1,0 +1,21 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+    <env:Body>
+        <soma:request xmlns:soma="http://www.datapower.com/schemas/management" domain="OII_QA">
+            <soma:modify-config>
+                <WSEndpointRewritePolicy name="OIIConsultaDescripService_wsp">
+                    <WSEndpointRemoteRewriteRule>
+						<!--Nota: verificar en el Object-> WebService-> WS-Proxy-Endpoint-Rewrite->Remote-Rewrite-Rule->el service port Match Expression-->
+                        <ServicePortMatchRegexp>^{http://ws.oii.amis.com.mx/}OIIConsultaDescripServicePort$</ServicePortMatchRegexp>
+                        <RemoteEndpointProtocol>HTTPS</RemoteEndpointProtocol>
+                        <RemoteEndpointHostname>uat.oii.com.mx</RemoteEndpointHostname>
+                        <RemoteEndpointPort>4433</RemoteEndpointPort>
+                        <RemoteEndpointURI>/OII-WS/OIIConsultaDescripService</RemoteEndpointURI>
+    				     <RemoteMQQM/>
+    					<RemoteTibcoEMS/>
+    					<RemoteWebSphereJMS/>
+                    </WSEndpointRemoteRewriteRule>
+                </WSEndpointRewritePolicy>
+            </soma:modify-config>
+        </soma:request>
+    </env:Body>
+</env:Envelope>

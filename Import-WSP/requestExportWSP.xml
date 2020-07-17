@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Body>
+        <dp:request xmlns:dp="http://www.datapower.com/schemas/management"
+            domain=" AppMovil_Dev">
+            <dp:do-export format="ZIP" all-files="true">
+                <dp:object name=" AppMovil_mpg" class="MultiProtocolGateway" ref-objects="true" ref-files="true"/>
+            </dp:do-export>
+        </dp:request>
+    </soapenv:Body>
+</soapenv:Envelope>
